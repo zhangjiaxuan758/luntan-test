@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#f3f3f4">
+<link rel="icon" href="data:,">
+<title>汇聊 · 公共论坛</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.2 9.2 0 0 1-3.6-.7L3 21l1.7-4.9A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 0 1-4 0v-.08A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.55-1H3a2 2 0 0 1 0-4h.08A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6h.08A1.7 1.7 0 0 0 10.08 3V3a2 2 0 0 1 4 0v.08A1.7 1.7 0 0 0 15 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9v.08A1.7 1.7 0 0 0 21 10.08H21a2 2 0 0 1 0 4h-.08A1.7 1.7 0 0 0 19.4 15Z"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><path d="m21.4 11.6-8.9 8.9a6 6 0 0 1-8.5-8.5l9.2-9.2a4 4 0 0 1 5.7 5.7l-9.2 9.2a2 2 0 0 1-2.8-2.8l8.5-8.5"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m22 8-6 4 6 4V8Z"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0M12 17v5M8 22h8"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4 20-7Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M3 7v6h6"/><path d="M3.5 13a9 9 0 1 0 2.3-6.4L3 9"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6M10 11v6M14 11v6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m20 6-11 11-5-5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m7 3 12 9-12 9V3Z"/></symbol>
+  <symbol id="i-dots" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></symbol>
+  <symbol id="i-reply" viewBox="0 0 24 24"><path d="M9 17 4 12l5-5"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></symbol>
+  <symbol id="i-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+  <symbol id="i-minimize" viewBox="0 0 24 24"><path d="M8 3v3a2 2 0 0 1-2 2H3M21 8h-3a2 2 0 0 1-2-2V3M3 16h3a2 2 0 0 1 2 2v3M16 21v-3a2 2 0 0 1 2-2h3"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+  <symbol id="i-volume-x" viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="m16 9 5 6M21 9l-5 6"/></symbol>
+  <symbol id="i-zoom-in" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M11 8v6M8 11h6M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-zoom-out" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M8 11h6M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-fit" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-forward" viewBox="0 0 24 24"><path d="m15 17 5-5-5-5"/><path d="M4 18v-2a4 4 0 0 1 4-4h12"/></symbol>
+</svg>
+
+<!-- ============ 身份设置 / 登录 ============ -->
+<div id="auth" class="auth-overlay">
+  <div class="auth-card">
+    <div class="auth-brand">
+      <div class="auth-logo"><svg><use href="#i-chat"/></svg></div>
+      <h1>汇聊</h1>
+      <p>一个可以发送任何东西的地方</p>
+    </div>
+
+    <div class="field-label">选择头像</div>
+    <div class="avatar-picker">
+      <div id="regAvatarBig" class="avatar avatar-xl"></div>
+      <div class="avatar-presets" id="regPresets"></div>
+      <button type="button" class="btn btn-ghost btn-sm" id="regAvatarUpload">
+        <svg><use href="#i-upload"/></svg> 上传自定义头像
+      </button>
+      <input type="file" id="regAvatarFile" accept="image/*" hidden>
+    </div>
+
+    <div class="field-label" for="regName">你的名字</div>
+    <input id="regName" class="input" type="text" placeholder="起个名字，1~10 位" autocomplete="off" spellcheck="false">
+    <div class="field-hint"><span id="regNameCount">0 / 10</span><span>中文、英文、数字、符号都可以 · 名字不能重复</span></div>
+
+    <div class="auth-error" id="authError"></div>
+    <button class="btn btn-primary btn-block" id="regBtn">进入汇聊</button>
+
+    <div class="auth-foot">
+      <button type="button" class="link-btn" id="showRestore">已有身份码？恢复身份</button>
+      <div id="restoreBox" class="restore-box hidden">
+        <input id="restoreToken" class="input" placeholder="粘贴你的身份码" autocomplete="off" spellcheck="false">
+        <button class="btn btn-ghost btn-sm" id="restoreBtn">恢复</button>
+      </div>
+    </div>
+    <div class="auth-note">所有人会自动加入「公共群聊」，也可以添加任何人私聊。</div>
+  </div>
+</div>
+
+<!-- ============ 主界面 ============ -->
+<div id="app" class="app hidden">
+  <aside class="sidebar" id="sidebar">
+    <div class="side-head">
+      <div class="me-info">
+        <div id="meAvatar" class="avatar"></div>
+        <div class="me-text">
+          <div id="meName" class="me-name"></div>
+          <div id="meStatus" class="me-status">连接中…</div>
+        </div>
+      </div>
+      <button class="icon-btn" id="settingsBtn" title="设置"><svg><use href="#i-gear"/></svg></button>
+    </div>
+
+    <div class="side-tabs">
+      <button class="tab active" data-tab="chats"><svg><use href="#i-chat"/></svg>消息</button>
+      <button class="tab" data-tab="people"><svg><use href="#i-users"/></svg>找人</button>
+      <button class="tab" data-tab="requests"><svg><use href="#i-bell"/></svg>申请<span id="reqBadge" class="badge hidden">0</span></button>
+    </div>
+
+    <div class="side-search">
+      <svg><use href="#i-search"/></svg>
+      <input id="searchInput" placeholder="搜索会话或用户" autocomplete="off">
+    </div>
+
+    <div class="side-list" id="sideList"></div>
+
+    <div class="side-foot">
+      <span class="dot" id="connDot"></span><span id="connText">连接中</span>
+      <span class="side-foot-right" id="onlineCount">0 人在线</span>
+    </div>
+  </aside>
+
+  <div class="sidebar-mask" id="sidebarMask"></div>
+
+  <main class="chat">
+    <header class="chat-head">
+      <button class="icon-btn mobile-only" id="menuBtn"><svg><use href="#i-menu"/></svg></button>
+      <div class="chat-head-text">
+        <h2 id="convTitle">公共群聊</h2>
+        <div id="convSub" class="chat-sub"></div>
+      </div>
+      <button class="icon-btn" id="convInfoBtn" title="会话信息"><svg><use href="#i-users"/></svg></button>
+    </header>
+
+    <div class="messages" id="messages"></div>
+
+    <div class="composer">
+      <div class="quote-bar hidden" id="quoteBar">
+        <div class="quote-bar-icon"><svg><use href="#i-reply"/></svg></div>
+        <div class="quote-bar-main">
+          <div class="quote-bar-head">回复 <b id="quoteName"></b></div>
+          <div class="quote-bar-text" id="quoteText"></div>
+        </div>
+        <button class="icon-btn" id="quoteCancel" title="取消引用"><svg><use href="#i-close"/></svg></button>
+      </div>
+
+      <div class="draft-bar hidden" id="draftBar">
+        <div class="draft-head">
+          <span class="draft-title">待发送 <b id="draftCount">0</b></span>
+          <span class="draft-target" id="draftTarget"></span>
+          <span class="draft-hint">点「发送」才会发出 · 可单独删除</span>
+          <button class="link-btn" id="clearDrafts">全部清除</button>
+        </div>
+        <div class="draft-list" id="draftList"></div>
+      </div>
+
+      <div class="recorder hidden" id="recorder">
+        <span class="rec-dot"></span>
+        <span class="rec-time" id="recTime">00:00</span>
+        <span class="rec-hint">正在录音 · 最长 2 分钟 · 结束后需点「发送」</span>
+        <div class="rec-actions">
+          <button class="btn btn-ghost btn-sm" id="recCancel">取消</button>
+          <button class="btn btn-primary btn-sm" id="recDone">完成录音</button>
+        </div>
+      </div>
+
+      <div class="composer-tools">
+        <button class="tool-btn" id="btnFile" title="添加任意文件（含音频）"><svg><use href="#i-clip"/></svg></button>
+        <button class="tool-btn" id="btnImage" title="添加图片"><svg><use href="#i-image"/></svg></button>
+        <button class="tool-btn" id="btnVideo" title="添加视频"><svg><use href="#i-video"/></svg></button>
+        <button class="tool-btn" id="btnMic" title="录制语音（最长 2 分钟）"><svg><use href="#i-mic"/></svg></button>
+        <span class="tools-spacer"></span>
+        <span class="tools-tip">文件 / 图片 / 视频 / 音频大小不限 · 添加后需点发送</span>
+      </div>
+
+      <div class="composer-row">
+        <textarea id="msgInput" rows="1" placeholder="输入消息…  Enter 发送，Shift+Enter 换行"></textarea>
+        <button class="send-btn" id="sendBtn" title="发送文字与全部待发送内容"><svg><use href="#i-send"/></svg><span class="send-badge hidden" id="sendBadge">0</span></button>
+      </div>
+      <input type="file" id="fileInput" multiple hidden>
+      <input type="file" id="imageInput" accept="image/*" multiple hidden>
+      <input type="file" id="videoInput" accept="video/*" multiple hidden>
+    </div>
+  </main>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toasts"></div>
+<div id="lightbox" class="lightbox hidden"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>
