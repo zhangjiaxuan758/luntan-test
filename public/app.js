@@ -1,6 +1,6 @@
 'use strict';
 /* ==================================================================
- * 汇聊 — client
+ * 轩的论坛 — client
  * ================================================================== */
 
 /* ---------------- helpers ---------------- */
@@ -192,7 +192,7 @@ function initAuth() {
       await boot();
     } catch (e) {
       $('#authError').textContent = e.message;
-      btn.disabled = false; btn.textContent = '进入汇聊';
+      btn.disabled = false; btn.textContent = '进入论坛';
     }
   });
   updateRegAvatar();
